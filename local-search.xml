@@ -8,7 +8,7 @@
     <link href="/2022/10/05/%E8%AE%BA%E4%BD%BF%E7%94%A8python%E5%92%8CWebAssembly%E9%87%8D%E5%86%99scratch%E7%BC%96%E8%AF%91%E5%99%A8/"/>
     <url>/2022/10/05/%E8%AE%BA%E4%BD%BF%E7%94%A8python%E5%92%8CWebAssembly%E9%87%8D%E5%86%99scratch%E7%BC%96%E8%AF%91%E5%99%A8/</url>
     
-    <content type="html"><![CDATA[<p>scratch最大的缺陷就是性能及其拉跨，自从有了Evoluted-Scratch,Turbowarp, leopard-js等jit编译器，这个问题得到了一部分的解决。但是并没有使scratch的性能与其他语言接近，所以我认为可以用WASM来写scratch编译器，或许能最大程度提升scratch的运行速度。</p><p>目前使用python来写编译器的核心部分，编译器会将project.json和assets编译成C++(使用SDL作为渲染引擎)，再使用Emscripten将C++编译成WASM。</p><p>在BlockAssembly中，所有的积木都是scratch3.0包含的标准积木，但是可以通过一个类似core.js的”标准编译器”, 将clipcc, ccw, acamp等平台的特殊积木编译成标准积木。也可以更方便的编写扩展库，只需要一个json文件就能将block和code对应起来，编写成一个模块。也可以使用scratch轻松编写模块。</p><p>使用SDL和WASM的好处是，一样的代码能在不同的平台运行，(Andriod, IOS, Mac, Windows, Web等等)，scratch程序就可以轻松的打包到不同的平台。SDL后端使用OpenGL渲染，能稳定的达到浏览器支持的最高帧数。</p><p>最后，Github项目地址: <a href="https://github.com/LuminousWL/BlockAssembly">BlockAssembly</a></p>]]></content>
+    <content type="html"><![CDATA[<p>scratch最大的缺陷就是性能及其拉跨，自从有了Evoluted-Scratch,Turbowarp, leopard-js等jit编译器，这个问题得到了一部分的解决。但是并没有使scratch的性能与其他语言接近，所以我认为可以用WASM来写scratch编译器，或许能最大程度提升scratch的运行速度。</p><p>目前使用python来写编译器的核心部分，编译器会将project.json和assets编译成C++(使用SDL作为渲染引擎)，再使用Emscripten将C++编译成WASM。</p><p>在BlockAssembly中，所有的积木都是scratch3.0包含的标准积木，但是可以通过一个类似core.js的”标准编译器”, 将clipcc, ccw, acamp等平台的特殊积木编译成标准积木。也可以更方便的编写扩展库，只需要一个json文件就能将block和code对应起来，编写成一个模块。也可以使用scratch积木轻松编写模块。</p><p>使用SDL和WASM的好处是，一样的代码能在不同的平台运行，(Andriod, IOS, Mac, Windows, Web等等)，scratch程序就可以轻松的打包到不同的平台。SDL后端使用OpenGL渲染，能稳定的达到浏览器支持的最高帧数。</p><p>最后，Github项目地址: <a href="https://github.com/LuminousWL/BlockAssembly">BlockAssembly</a></p>]]></content>
     
     
     <categories>
